@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule, MatToolbarModule, UserListComponent, UserProfileComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'user-angular-app';
+  selectedUser: any;
+
+  handleUserSelection(user: any) {
+    this.selectedUser = user;
+  }
 }

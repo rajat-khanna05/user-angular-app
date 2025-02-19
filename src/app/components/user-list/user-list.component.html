@@ -1,0 +1,6 @@
+<mat-list class="user-list">
+  <h2>Full Name</h2>
+  <mat-list-item *ngFor="let user of users" (click)="selectUser(user)" [class.selected]="user === selectUser">
+    {{ user.name }}
+  </mat-list-item>
+</mat-list>

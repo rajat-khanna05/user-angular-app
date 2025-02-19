@@ -1,0 +1,17 @@
+.user-list {
+    width: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+  }
+  h2{
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+  }
+  
+  mat-list-item:hover {
+    background: #e0e0e0;
+  }
+  
+  
