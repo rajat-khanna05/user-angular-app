@@ -1,5 +1,10 @@
-<mat-toolbar>Users</mat-toolbar>
-<div class="container">
-  <app-user-list (userSelected)="handleUserSelection($event)"></app-user-list>
-  <app-user-profile [user]="selectedUser"></app-user-profile>
-</div>
+<mat-tab-group>
+  <mat-tab label="Home"> Home</mat-tab>
+  <mat-tab label="Users">
+      <mat-toolbar>Users</mat-toolbar>
+      <div class="container">
+        <app-user-list (userSelected)="handleUserSelection($event)"></app-user-list>
+        <app-user-profile [user]="selectedUser"></app-user-profile>
+      </div>
+  </mat-tab>
+</mat-tab-group>

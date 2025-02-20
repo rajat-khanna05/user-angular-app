@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { MatTabsModule } from '@angular/material/tabs'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, MatToolbarModule, UserListComponent, UserProfileComponent],
+  imports: [CommonModule, MatToolbarModule, UserListComponent, UserProfileComponent, MatTabsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
